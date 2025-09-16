@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <div class="logo">Portfolio</div>
+            <div class="logo"> Portfolio </div>
             <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="about.html"> About </a></li>
+                <li><a href="projects.html" class="active"> Projects </a></li>
+                <li><a href="resume.html"> Resume </a></li>
+                <li><a href="contact.html"> Contact </a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -29,7 +31,7 @@
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1 class="page-title">My Projects</h1>
+        <h1 class="page-title"> My Projects </h1>
         <p class="page-subtitle">
             A collection of robotics and AI projects showcasing my technical skills and passion for innovation
         </p>
@@ -38,34 +40,226 @@
     <!-- Projects Grid -->
     <section class="projects-container">
         <div class="projects-grid">
-            <!-- Project 1: Autonomous Navigation Robot -->
-            <div class="project-card" data-category="robotics" data-project="autonomous-robot">
+
+
+            <!-- Project 1: Video Special Effects -->
+            <div class="project-card" data-category="computer-vision" data-project="video-special-effects">
+                <div class="project-image">
+                    <i class="fas fa-video"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Real-Time Video Special Effects</h3>
+                    <p class="project-description">
+                        Comprehensive video processing system implementing 15+ real-time visual effects using OpenCV and
+                        C++. Features optimized blur algorithms, face detection, depth-based background manipulation,
+                        and interactive filter switching with performance improvements from 0.1229s to 0.0026s.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">ONNX Runtime</span>
+                        <span class="tech-tag">Computer Vision</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AwesomeYash/Project-1--Video-special-effects" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-alt"></i> Report
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Neural Style Transfer -->
+            <div class="project-card" data-category="ai-ml" data-project="neural-style-transfer">
+                <div class="project-image">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Neural Style Transfer - Implementation and Analysis</h3>
+                    <p class="project-description">
+                        PyTorch-based artistic style transfer system using pre-trained VGG19 features. Implements
+                        systematic hyperparameter experimentation with automated parameter sweeps, loss convergence
+                        analysis, and comprehensive visualization tools for optimal stylization quality.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">VGG19</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">L-BFGS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AwesomeYash/Neural-Style-Transfer--Implementation-and-Analysis"
+                            class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-images"></i> Results
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3: Deep Networks Recognition -->
+            <div class="project-card" data-category="ai-ml" data-project="deep-networks-recognition">
+                <div class="project-image">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Recognition using Deep Networks</h3>
+                    <p class="project-description">
+                        End-to-end deep learning workflow for image classification covering MNIST digit recognition and
+                        Greek character transfer learning. Features CNN architecture design, filter visualization for
+                        interpretability, and automated hyperparameter optimization with performance analysis.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">CNN</span>
+                        <span class="tech-tag">Transfer Learning</span>
+                        <span class="tech-tag">Data Analysis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AwesomeYash/Project-5--Recognition-using-Deep-Networks"
+                            class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-chart-line"></i> Results
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Calibration and Augmented Reality -->
+            <div class="project-card" data-category="computer-vision" data-project="calibration-augmented-reality">
+                <div class="project-image">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Calibration and Augmented Reality</h3>
+                    <p class="project-description">
+                        Comprehensive camera calibration and AR system using C++ and OpenCV. Performs
+                        intrinsic/extrinsic parameter estimation for accurate 3D-to-2D projection with advanced feature
+                        detection algorithms (SIFT, ORB, SURF) and distortion correction pipeline.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">SIFT/ORB/SURF</span>
+                        <span class="tech-tag">3D Graphics</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AwesomeYash/Project-4--Calibration-and-Augmented-Reality"
+                            class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-file-alt"></i> Report
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5: Content-Based Image Retrieval -->
+            <div class="project-card" data-category="ai-ml" data-project="content-based-image-retrieval">
+                <div class="project-image">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Content-Based Image Retrieval System</h3>
+                    <p class="project-description">
+                        Advanced CBIR system combining classical feature extraction with deep learning embeddings.
+                        Implements multi-modal approaches including histogram analysis, texture-color fusion, and
+                        ResNet18 features with comparative performance analysis across retrieval methodologies.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">ResNet18</span>
+                        <span class="tech-tag">Feature Engineering</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AwesomeYash/Project-2--Content-based-Image-Retrieval"
+                            class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-images"></i> Dataset
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6: Electrohub EV Docking System -->
+            <div class="project-card" data-category="robotics" data-project="electrohub-docking-system">
+                <div class="project-image">
+                    <i class="fas fa-charging-station"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Electrohub - Autonomous EV Docking System</h3>
+                    <p class="project-description">
+                        Autonomous docking system for electric vehicles using advanced computer vision and machine
+                        learning. Achieves 92% precision in EV charging port detection using SSD-MobileNet-V2 with
+                        1,000+ annotated training images and real-time classification capabilities.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">SSD-MobileNet-V2</span>
+                        <span class="tech-tag">LabelImg</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/AwesomeYash/Electrohub-Docking-System-for-EVs" class="project-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-university"></i> SRM Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional projects can be added here following the same structure -->
+            <!-- Neural-Style-Transfer--Implementation-and-Analysis
+            <div class="project-card" data-category="robotics" data-project="neural-style-transfer">
                 <div class="project-image">
                     <i class="fas fa-robot"></i>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Autonomous Navigation Robot</h3>
+                    <h3 class="project-title"> Neural Style Transfer -<br>
+                        Implementation and Analysis </h3>
                     <p class="project-description">
-                        Developed an autonomous mobile robot using ROS2 with SLAM capabilities for indoor navigation and obstacle avoidance.
+                        This project implements a comprehensive PyTorch-based Neural Style Transfer algorithm following
+                        the seminal work by Gatys et al. The system enables artistic style transfer by combining content
+                        and style representations from different images using pre-trained VGG19 features. The
+                        implementation features systematic hyperparameter experimentation capabilities, allowing
+                        analysis of how different noise ratios, learning rates, and loss weights affect stylization
+                        quality. The project includes automated parameter sweeps, loss convergence analysis, and
+                        comprehensive visualization tools for comparing different stylization approaches and their
+                        effectiveness.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">ROS2</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">SLAM</span>
-                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag"> Computer Vision </span>
+                        <span class="tech-tag"> Python </span>
+                        <span class="tech-tag"> Image Processing </span>
+                        <span class="tech-tag"> OpenCV </span>
+                        <span class="tech-tag"> Deep Learning </span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">
+                        <a href="https://github.com/AwesomeYash/Neural-Style-Transfer--Implementation-and-Analysis"
+                            class="project-link" target="_blank ">
                             <i class="fab fa-github"></i> GitHub
                         </a>
-                        <a href="#" class="project-link">
+                        <a href="https://github.com/AwesomeYash/Neural-Style-Transfer--Implementation-and-Analysis/blob/main/imgs/stylized_image.png"
+                            class="project-link">
                             <i class="fas fa-play"></i> Demo
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2: Computer Vision Pipeline -->
+            Project 2: Computer Vision Pipeline 
             <div class="project-card" data-category="ai-ml" data-project="vision-pipeline">
                 <div class="project-image">
                     <i class="fas fa-eye"></i>
@@ -73,7 +267,8 @@
                 <div class="project-content">
                     <h3 class="project-title">Real-time Object Detection Pipeline</h3>
                     <p class="project-description">
-                        Built a real-time object detection system using YOLO and deployed it on edge devices for industrial applications.
+                        Built a real-time object detection system using YOLO and deployed it on edge devices for
+                        industrial applications.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">PyTorch</span>
@@ -92,7 +287,7 @@
                 </div>
             </div>
 
-            <!-- Project 3: Robotic Arm Control -->
+             Project 3: Robotic Arm Control
             <div class="project-card" data-category="robotics" data-project="robotic-arm">
                 <div class="project-image">
                     <i class="fas fa-hand-paper"></i>
@@ -100,7 +295,8 @@
                 <div class="project-content">
                     <h3 class="project-title">6-DOF Robotic Arm Controller</h3>
                     <p class="project-description">
-                        Implemented inverse kinematics and trajectory planning for a 6-DOF robotic arm with precision manipulation tasks.
+                        Implemented inverse kinematics and trajectory planning for a 6-DOF robotic arm with precision
+                        manipulation tasks.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">C++</span>
@@ -119,7 +315,7 @@
                 </div>
             </div>
 
-            <!-- Project 4: Portfolio Website -->
+             Project 4: Portfolio Website
             <div class="project-card" data-category="web" data-project="portfolio">
                 <div class="project-image">
                     <i class="fas fa-globe"></i>
@@ -127,7 +323,8 @@
                 <div class="project-content">
                     <h3 class="project-title">Interactive Portfolio Website</h3>
                     <p class="project-description">
-                        Designed and developed a responsive portfolio website with modern UI/UX and interactive project showcases.
+                        Designed and developed a responsive portfolio website with modern UI/UX and interactive project
+                        showcases.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">HTML5</span>
@@ -146,7 +343,7 @@
                 </div>
             </div>
 
-            <!-- Project 5: IoT Sensor Network -->
+             Project 5: IoT Sensor Network
             <div class="project-card" data-category="embedded" data-project="iot-sensors">
                 <div class="project-image">
                     <i class="fas fa-wifi"></i>
@@ -154,7 +351,8 @@
                 <div class="project-content">
                     <h3 class="project-title">IoT Environmental Monitoring</h3>
                     <p class="project-description">
-                        Created a wireless sensor network for real-time environmental monitoring with cloud data visualization.
+                        Created a wireless sensor network for real-time environmental monitoring with cloud data
+                        visualization.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Arduino</span>
@@ -173,7 +371,7 @@
                 </div>
             </div>
 
-            <!-- Project 6: Machine Learning Model -->
+             Project 6: Machine Learning Model 
             <div class="project-card" data-category="ai-ml" data-project="ml-model">
                 <div class="project-image">
                     <i class="fas fa-brain"></i>
@@ -181,7 +379,8 @@
                 <div class="project-content">
                     <h3 class="project-title">Predictive Maintenance AI</h3>
                     <p class="project-description">
-                        Developed machine learning models for predictive maintenance in industrial robotics using sensor data analysis.
+                        Developed machine learning models for predictive maintenance in industrial robotics using sensor
+                        data analysis.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
@@ -199,6 +398,8 @@
                     </div>
                 </div>
             </div>
+-->
+
         </div>
     </section>
 
@@ -215,26 +416,26 @@
                     <h3>Project Overview</h3>
                     <p id="modalDescription">Detailed project description will go here...</p>
                 </div>
-                
+
                 <div class="modal-section">
                     <h3>Technologies Used</h3>
                     <div class="modal-tech-grid" id="modalTech">
                         <!-- Tech tags will be populated here -->
                     </div>
                 </div>
-                
+
                 <div class="modal-section">
                     <h3>Key Features</h3>
                     <ul id="modalFeatures">
                         <!-- Features will be populated here -->
                     </ul>
                 </div>
-                
+
                 <div class="modal-section">
                     <h3>Challenges & Solutions</h3>
                     <p id="modalChallenges">Technical challenges and solutions will be described here...</p>
                 </div>
-                
+
                 <div class="modal-section">
                     <h3>Project Links</h3>
                     <div class="modal-links" id="modalLinks">
@@ -249,7 +450,7 @@
         // Mobile Navigation Toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
-        
+
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
@@ -280,6 +481,132 @@
                     { text: 'Technical Documentation', url: '#', icon: 'fas fa-file-alt', primary: false }
                 ]
             },
+
+            'video-special-effects': {
+                title: 'Real-Time Video Special Effects',
+                subtitle: 'Computer Vision • OpenCV • C++',
+                description: 'This comprehensive video special effects project implements real-time image and video processing applications using OpenCV and C++. The system features dual functionality for both static image processing and live video stream filtering with an extensive collection of visual effects including grayscale conversion, blur filters, edge detection, face recognition, and depth-based background manipulation.',
+                tech: ['C++', 'OpenCV', 'ONNX Runtime', 'Computer Vision', 'Image Processing', 'Face Detection', 'Depth Estimation'],
+                features: [
+                    'Comprehensive filter library with 15+ visual effects including custom greyscale, sepia, blur variants, and Sobel edge detection',
+                    'Optimized blur implementation with three algorithms showing performance improvements from 0.1229s to 0.0026s',
+                    'Advanced face processing with Cascade Classifier for detection and privacy-focused redaction using Gaussian blur',
+                    'Depth-based background blur using Depth Anything V2 ONNX model for monocular depth estimation',
+                    'Real-time video recording with simultaneous filter application and OpenCV VideoWriter integration',
+                    'Interactive file management with intuitive load/save operations supporting multiple formats (JPG, PNG, AVI)'
+                ],
+                challenges: 'The primary challenge was achieving real-time performance while maintaining filter quality across different processing approaches. This was solved by implementing separable kernel techniques that reduced computational complexity from O(n²) to O(2n) for blur operations. Memory management issues with different data types were addressed through careful 16-bit intermediate calculations.',
+                links: [
+                    { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/Project-1--Video-special-effects', icon: 'fab fa-github', primary: true },
+                    { text: 'Project Report', url: '#', icon: 'fas fa-file-alt', primary: false },
+                    { text: 'Demo Videos', url: '#', icon: 'fas fa-play', primary: false }
+                ]
+            },
+
+            'neural-style-transfer': {
+                title: 'Neural Style Transfer - Implementation and Analysis',
+                subtitle: 'Deep Learning • PyTorch • Computer Vision',
+                description: 'This project implements a comprehensive PyTorch-based Neural Style Transfer algorithm following the seminal work by Gatys et al. The system enables artistic style transfer by combining content and style representations from different images using pre-trained VGG19 features. The implementation features systematic hyperparameter experimentation capabilities, allowing analysis of how different noise ratios, learning rates, and loss weights affect stylization quality.',
+                tech: ['PyTorch', 'Computer Vision', 'Deep Learning', 'VGG19', 'L-BFGS', 'Image Processing', 'Feature Extraction'],
+                features: [
+                    'Multi-layer style representation extracting features from multiple VGG19 layers using Gram matrices to capture texture patterns',
+                    'Flexible loss function architecture implementing weighted combination of content, style, and total variation losses',
+                    'Automated parameter experimentation with systematic hyperparameter exploration across noise ratios and learning rates',
+                    'Real-time progress monitoring saving intermediate results with loss history tracking and convergence visualization',
+                    'Configurable initialization strategy supporting variable noise ratios balancing creativity and structure preservation',
+                    'Comprehensive output management with parameter-tagged outputs, loss histories, and experiment reports'
+                ],
+                challenges: 'The primary challenge was balancing content preservation with effective style transfer across different parameter combinations. This was solved by implementing systematic experimentation with noise ratios and learning rates, discovering that medium values (0.4-0.6) provide optimal balance. Total variation regularization was added to prevent spatial artifacts.',
+                links: [
+                    { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/Neural-Style-Transfer--Implementation-and-Analysis', icon: 'fab fa-github', primary: true },
+                    { text: 'Code Files', url: 'https://northeastern-my.sharepoint.com/:f:/g/personal/ranka_pr_northeastern_edu/EqywOadPP4RFkvkPk7wLTk4BHRzkHYn6GTZ4oKn82abkbA?e=QHnx0a', icon: 'fas fa-code', primary: false },
+                    { text: 'Output Examples', url: 'https://northeastern-my.sharepoint.com/:f:/g/personal/ranka_pr_northeastern_edu/EumQEPT9f7xOpbYX0k0eJ9IByUB7AwPh6fbNLuK1IGAHzA?e=Fz2EFj', icon: 'fas fa-images', primary: false }
+                ]
+            },
+
+            'deep-networks-recognition': {
+                title: 'Recognition using Deep Networks',
+                subtitle: 'Deep Learning • PyTorch • Transfer Learning',
+                description: 'This comprehensive deep learning project explores image classification through convolutional neural networks, covering digit recognition on MNIST and transfer learning for Greek character classification. The implementation demonstrates end-to-end deep learning workflow including CNN architecture design, model training with PyTorch, filter visualization for interpretability, and transfer learning adaptation.',
+                tech: ['PyTorch', 'Deep Learning', 'CNN', 'Transfer Learning', 'Computer Vision', 'Data Analysis', 'Model Visualization'],
+                features: [
+                    'Modular CNN architecture implementing convolutional neural network from scratch with customizable layers and operations',
+                    'Filter visualization and interpretability extracting learned filters from convolutional layers to understand feature detection',
+                    'Multi-dataset transfer learning adapting pre-trained MNIST model for Greek character recognition with fine-tuning',
+                    'Automated hyperparameter optimization with systematic experimentation framework and CSV logging',
+                    'Cross-domain evaluation testing model robustness on Fashion-MNIST, handwritten digits, and painted numbers',
+                    'Performance analysis pipeline generating accuracy plots, confusion matrices, and statistical summaries'
+                ],
+                challenges: 'The main challenge was achieving effective transfer learning from MNIST digits to Greek characters with different visual characteristics. This was addressed by strategically freezing early convolutional layers while fine-tuning classifier layers. Hyperparameter optimization was automated through systematic grid search with CSV tracking.',
+                links: [
+                    { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/Project-5--Recognition-using-Deep-Networks', icon: 'fab fa-github', primary: true },
+                    { text: 'Project Report', url: '#', icon: 'fas fa-file-alt', primary: false },
+                    { text: 'Performance Results', url: '#', icon: 'fas fa-chart-line', primary: false }
+                ]
+            },
+
+            'calibration-augmented-reality': {
+                title: 'Calibration and Augmented Reality',
+                subtitle: 'Computer Vision • C++ • 3D Graphics',
+                description: 'This computer vision project implements a comprehensive camera calibration and augmented reality system using C++ and OpenCV. The system performs intrinsic and extrinsic camera parameter estimation through multiple calibration images, enabling accurate 3D-to-2D projection for augmented reality applications. The implementation includes advanced feature detection algorithms for keypoint extraction and visualization.',
+                tech: ['C++', 'OpenCV', 'Computer Vision', 'SIFT', 'ORB', 'SURF', '3D Graphics', 'Camera Calibration'],
+                features: [
+                    'Comprehensive camera calibration estimating intrinsic camera matrix and distortion coefficients using chessboard pattern detection',
+                    'Real-time 3D object projection transforming 3D coordinate points onto 2D image plane using computed calibration parameters',
+                    'Multi-algorithm feature detection implementing SIFT, ORB, and SURF with keypoint visualization for robust feature extraction',
+                    'Distortion correction pipeline applying computed coefficients to correct lens aberrations for accurate transformations',
+                    'Modular C++ architecture separating calibration, projection, and feature detection into distinct maintainable modules',
+                    'Persistent parameter storage saving calibration results to CSV format for reuse across sessions'
+                ],
+                challenges: 'The primary challenge was achieving accurate 3D-to-2D projection while handling lens distortion and varying lighting conditions. This was solved by implementing robust calibration using multiple chessboard images and applying distortion correction before projection. Feature detection stability was enhanced by providing multiple algorithm options.',
+                links: [
+                    { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/Project-4--Calibration-and-Augmented-Reality', icon: 'fab fa-github', primary: true },
+                    { text: 'Project Report', url: '#', icon: 'fas fa-file-alt', primary: false },
+                    { text: 'Calibration Data', url: '#', icon: 'fas fa-database', primary: false }
+                ]
+            },
+
+            'content-based-image-retrieval': {
+                title: 'Content-Based Image Retrieval System',
+                subtitle: 'Computer Vision • Machine Learning • Feature Extraction',
+                description: 'This comprehensive Content-Based Image Retrieval (CBIR) system implements multiple approaches for visual similarity search, combining classical feature extraction techniques with modern deep learning embeddings. The project systematically explores various retrieval methodologies including baseline SSD matching, histogram-based color analysis, multi-regional histogram comparison, texture-color fusion, and ResNet18 deep feature embeddings.',
+                tech: ['C++', 'OpenCV', 'ResNet18', 'Computer Vision', 'Feature Engineering', 'Deep Learning', 'Image Processing'],
+                features: [
+                    'Multi-modal feature extraction implementing diverse approaches including central patch baseline and rg-chromaticity histograms',
+                    'Regional multi-histogram analysis extracting histograms from different image regions using weighted distance metrics',
+                    'Deep learning integration utilizing pre-computed 512-dimensional ResNet18 feature vectors from ImageNet',
+                    'Hybrid color-texture fusion combining whole-image color histograms with Sobel-based texture descriptors',
+                    'Domain-specific customization implementing specialized feature vectors for category-specific retrieval (shoes)',
+                    'Comparative performance analysis systematically evaluating classical vs. deep learning approaches with quantitative metrics'
+                ],
+                challenges: 'The main challenge was balancing retrieval accuracy across different image types while maintaining computational efficiency. This was addressed by implementing multiple complementary approaches and comparing their performance systematically. The integration of classical features with deep embeddings provided robust performance.',
+                links: [
+                    { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/Project-2--Content-based-Image-Retrieval', icon: 'fab fa-github', primary: true },
+                    { text: 'Project Report', url: '#', icon: 'fas fa-file-alt', primary: false },
+                    { text: 'Dataset Results', url: '#', icon: 'fas fa-images', primary: false }
+                ]
+            },
+
+            'electrohub-docking-system': {
+                title: 'Electrohub - Autonomous EV Docking System',
+                subtitle: 'Machine Learning • Computer Vision • Autonomous Systems',
+                description: 'This major project develops an autonomous docking system for electric vehicles using advanced computer vision and machine learning techniques. The system automates the EV charging process by implementing high-precision computer vision applications for detecting and localizing EV charging ports with 92% accuracy. The project combines deep learning object detection with real-time classification systems.',
+                tech: ['Python', 'TensorFlow', 'Computer Vision', 'SSD-MobileNet-V2', 'LabelImg', 'Object Detection', 'Autonomous Systems'],
+                features: [
+                    'High-precision object detection implementing SSD-MobileNet-V2 achieving 92% precision in detecting EV charging ports',
+                    'Comprehensive dataset creation with over 1,000 annotated images using LabelImg covering various charging port configurations',
+                    'Multi-modal segmentation pipeline combining object detection, instance segmentation, and semantic segmentation techniques',
+                    'Real-time classification system enabling automated charging port recognition with minimal latency',
+                    'Autonomous docking integration providing accurate positioning data for automated charging connector alignment',
+                    'Robust environmental adaptation handling varying lighting conditions and different EV models through comprehensive training'
+                ],
+                challenges: 'The primary challenge was achieving high accuracy across diverse EV models and environmental conditions while maintaining real-time performance. This was solved through extensive dataset annotation with 1,000+ images and implementing lightweight SSD-MobileNet-V2 architecture. Multi-modal segmentation techniques ensured reliable detection.',
+                links: [
+                    { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/Electrohub-Docking-System-for-EVs', icon: 'fab fa-github', primary: true },
+                    { text: 'Research Documentation', url: '#', icon: 'fas fa-file-alt', primary: false },
+                    { text: 'SRM University Project', url: '#', icon: 'fas fa-university', primary: false }
+                ]
+            },
             'vision-pipeline': {
                 title: 'Real-time Object Detection Pipeline',
                 subtitle: 'AI/ML • Computer Vision • Edge Computing',
@@ -306,34 +633,34 @@
             card.addEventListener('click', () => {
                 const projectId = card.getAttribute('data-project');
                 const project = projectData[projectId];
-                
+
                 if (project) {
                     // Populate modal content
                     document.getElementById('modalTitle').textContent = project.title;
                     document.getElementById('modalSubtitle').textContent = project.subtitle;
                     document.getElementById('modalDescription').textContent = project.description;
                     document.getElementById('modalChallenges').textContent = project.challenges;
-                    
+
                     // Populate tech tags
                     const techContainer = document.getElementById('modalTech');
-                    techContainer.innerHTML = project.tech.map(tech => 
+                    techContainer.innerHTML = project.tech.map(tech =>
                         `<span class="tech-tag">${tech}</span>`
                     ).join('');
-                    
+
                     // Populate features
                     const featuresContainer = document.getElementById('modalFeatures');
-                    featuresContainer.innerHTML = project.features.map(feature => 
+                    featuresContainer.innerHTML = project.features.map(feature =>
                         `<li style="color: var(--text-secondary); margin-bottom: 0.5rem;">${feature}</li>`
                     ).join('');
-                    
+
                     // Populate links
                     const linksContainer = document.getElementById('modalLinks');
-                    linksContainer.innerHTML = project.links.map(link => 
+                    linksContainer.innerHTML = project.links.map(link =>
                         `<a href="${link.url}" class="modal-btn${link.primary ? '' : ' secondary'}" target="_blank">
                             <i class="${link.icon}"></i> ${link.text}
                         </a>`
                     ).join('');
-                    
+
                     // Show modal
                     modal.style.display = 'block';
                     document.body.style.overflow = 'hidden';
@@ -374,4 +701,5 @@
         });
     </script>
 </body>
+
 </html>
