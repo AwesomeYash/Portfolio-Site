@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Priyanshu Ranka</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1 class="page-title">Resume</h1>
+        <div class="download-buttons">
+            <button onclick="downloadPDF()" class="btn btn-primary">
+                <i class="fas fa-download"></i>
+                Download PDF
+            </button>
+            <button onclick="window.print()" class="btn btn-secondary">
+                <i class="fas fa-print"></i>
+                Print Resume
+            </button>
+        </div>
+    </section>
+
+    <!-- Resume Content -->
+    <div class="resume-container">
+        <div class="resume-content">
+            <!-- Resume Header -->
+            <div class="resume-header">
+                <h1 class="resume-name">Priyanshu Ranka</h1>
+                <p class="resume-title">MS Robotics Student | Robotics Engineer</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:yashranka38@gmail.com">yashranka38@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (857) 397-7460</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/priyanshu-ranka/" target="_blank">linkedin.com/in/priyanshu-ranka</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/AwesomeYash" target="_blank">github.com/AwesomeYash</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Boston, MA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Summary -->
+            <div class="resume-section">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Professional Summary
+                </h2>
+                <div class="section-content">
+                    <p>
+                        Passionate robotics engineering graduate student with 3+ years of experience in autonomous systems, 
+                        computer vision, and machine learning. Proven track record of developing innovative robotic solutions 
+                        for real-world applications. Seeking a full-time robotics engineer position to contribute to 
+                        cutting-edge automation and AI-driven technologies.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="resume-section">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </h2>
+                <div class="section-content">
+                    <div class="education-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Master of Science in Robotics</div>
+                                <div class="item-company">Northeastern University, Boston, MA</div>
+                            </div>
+                            <div class="item-date">Sept 2023 - May 2025</div>
+                        </div>
+                        <div class="item-description">
+                            <p><strong>GPA:</strong> 3.8/4.0 | <strong>Relevant Coursework:</strong> Robot Sensing & Navigation, Computer Vision, Machine Learning, Control Systems, Embedded Systems</p>
+                            <ul>
+                                <li>Graduate Research Assistant in Autonomous Systems Lab</li>
+                                <li>Published 2 conference papers on SLAM algorithms</li>
+                                <li>Teaching Assistant for Introduction to Robotics course</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Bachelor of Engineering in Electronics & Communication</div>
+                                <div class="item-company">Your Previous University</div>
+                            </div>
+                            <div class="item-date">Aug 2019 - May 2023</div>
+                        </div>
+                        <div class="item-description">
+                            <p><strong>GPA:</strong> 3.7/4.0 | <strong>Honors:</strong> Magna Cum Laude, Dean's List (6 semesters)</p>
+                            <ul>
+                                <li>Senior Design Project: Autonomous Drone Navigation System</li>
+                                <li>President of Robotics Club (2022-2023)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="resume-section">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Professional Experience
+                </h2>
+                <div class="section-content">
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Robotics Engineering Co-op</div>
+                                <div class="item-company">Boston Dynamics, Waltham, MA</div>
+                            </div>
+                            <div class="item-date">Jan 2024 - Aug 2024</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Developed perception algorithms for Spot robot using ROS2 and Python</li>
+                                <li>Implemented computer vision pipeline reducing object detection latency by 40%</li>
+                                <li>Collaborated with cross-functional teams on autonomous inspection applications</li>
+                                <li>Created comprehensive test suites and documentation for robotic systems</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Software Engineering Intern</div>
+                                <div class="item-company">iRobot Corporation, Bedford, MA</div>
+                            </div>
+                            <div class="item-date">May 2023 - Dec 2023</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Contributed to Roomba navigation stack using SLAM and path planning algorithms</li>
+                                <li>Optimized mapping algorithms resulting in 25% improvement in cleaning efficiency</li>
+                                <li>Developed Python tools for sensor data analysis and visualization</li>
+                                <li>Participated in agile development process and code reviews</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Research Assistant</div>
+                                <div class="item-company">University Robotics Lab</div>
+                            </div>
+                            <div class="item-date">Sep 2022 - May 2023</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Researched autonomous navigation for mobile robots in dynamic environments</li>
+                                <li>Implemented and tested various SLAM algorithms in simulation and hardware</li>
+                                <li>Co-authored research paper published in IEEE Robotics Conference</li>
+                                <li>Mentored undergraduate students on robotics projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills -->
+            <div class="resume-section">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs"></i>
+                    Technical Skills
+                </h2>
+                <div class="section-content">
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4>Programming Languages</h4>
+                            <div class="skill-list">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">MATLAB</span>
+                                <span class="skill-tag">JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Robotics & AI</h4>
+                            <div class="skill-list">
+                                <span class="skill-tag">ROS/ROS2</span>
+                                <span class="skill-tag">OpenCV</span>
+                                <span class="skill-tag">PCL</span>
+                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">SLAM</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Tools & Platforms</h4>
+                            <div class="skill-list">
+                                <span class="skill-tag">Linux</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Gazebo</span>
+                                <span class="skill-tag">Rviz</span>
+                                <span class="skill-tag">AWS</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4>Hardware</h4>
+                            <div class="skill-list">
+                                <span class="skill-tag">Arduino</span>
+                                <span class="skill-tag">Raspberry Pi</span>
+                                <span class="skill-tag">NVIDIA Jetson</span>
+                                <span class="skill-tag">LiDAR</span>
+                                <span class="skill-tag">IMU</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Projects -->
+            <div class="resume-section">
+                <h2 class="section-title">
+                    <i class="fas fa-project-diagram"></i>
+                    Key Projects
+                </h2>
+                <div class="section-content">
+                    <div class="project-summary">
+                        <div class="project-item">
+                            <div class="project-name">Autonomous Navigation Robot</div>
+                            <div class="project-tech">ROS2, Python, SLAM, OpenCV</div>
+                            <div class="project-desc">
+                                Developed complete autonomous navigation system with real-time SLAM and dynamic obstacle avoidance.
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-name">Real-time Object Detection</div>
+                            <div class="project-tech">PyTorch, YOLO, TensorRT, OpenCV</div>
+                            <div class="project-desc">
+                                Built high-performance object detection pipeline optimized for edge deployment in industrial applications.
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-name">6-DOF Robotic Arm Controller</div>
+                            <div class="project-tech">C++, ROS, MoveIt, Gazebo</div>
+                            <div class="project-desc">
+                                Implemented inverse kinematics and trajectory planning for precision manipulation tasks.
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <div class="project-name">Predictive Maintenance AI</div>
+                            <div class="project-tech">Python, TensorFlow, Scikit-learn</div>
+                            <div class="project-desc">
+                                Developed ML models for predictive maintenance in industrial robotics using sensor data analysis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications & Awards -->
+            <div class="resume-section">
+                <h2 class="section-title">
+                    <i class="fas fa-award"></i>
+                    Certifications & Awards
+                </h2>
+                <div class="section-content">
+                    <ul>
+                        <li><strong>AWS Certified Cloud Practitioner</strong> - Amazon Web Services (2024)</li>
+                        <li><strong>Best Paper Award</strong> - IEEE International Conference on Robotics (2024)</li>
+                        <li><strong>Graduate Fellowship</strong> - Northeastern University (2023-2025)</li>
+                        <li><strong>First Place</strong> - University Robotics Competition (2023)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // PDF Download Functionality
+        function downloadPDF() {
+            window.print();
+        }
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(10, 10, 10, 0.98)';
+            } else {
+                header.style.background = 'rgba(10, 10, 10, 0.95)';
+            }
+        });
+
+        // Print optimization
+        window.addEventListener('beforeprint', () => {
+            document.body.classList.add('printing');
+        });
+
+        window.addEventListener('afterprint', () => {
+            document.body.classList.remove('printing');
+        });
+    </script>
+</body>
+</html>
