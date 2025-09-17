@@ -503,12 +503,23 @@
 
             // PDF Download Functionality
             function downloadPDF() {
-                const link = document.createElement('a');
-                link.href = 'assets/Priyanshu_Ranka_Resume.pdf';
-                link.download = 'Priyanshu_Ranka_Resume.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
+                fetch("https://github.com/AwesomeYash/Portfolio-Site/blob/main/Assests/Priyanshu_Ranka_Resume.pdf")
+                    .then(response => response.blob())
+                    .then(blob => {
+                        const url = window.URL.createObjectURL(blob);
+                        const link = document.createElement('a');
+                        link.href = url;
+                        link.download = "https://github.com/AwesomeYash/Portfolio-Site/blob/main/Assests/Priyanshu_Ranka_Resume.pdf";
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        window.URL.revokeObjectURL(url);
+                    })
+                    .catch(error => {
+                        console.error('Download failed:', error);
+                        // Fallback: open in new tab
+                        window.open("https://github.com/AwesomeYash/Portfolio-Site/blob/main/Assests/Priyanshu_Ranka_Resume.pdf", '_blank');
+                    });
             }
 
             // Header background on scroll
