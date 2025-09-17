@@ -1582,6 +1582,10 @@ body {
     .hero-image {
         width: 150px;
         height: 150px;
+        border-radius: 50%;
+        /* This makes it circular */
+        object-fit: cover;
+        /* This crops the image to fit properly */
     }
 
     .hero-image i {
