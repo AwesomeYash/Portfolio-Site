@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -41,49 +43,16 @@
             <!-- Contact Information -->
             <div class="contact-info">
                 <h3>Contact Information</h3>
-                
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Email</h4>
-                        <p><a href="mailto:yashranka38@gmail.com">yashranka38@gmail.com</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Phone</h4>
-                        <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Location</h4>
-                        <p>Boston, MA, USA</p>
-                    </div>
-                </div>
-
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Response Time</h4>
-                        <p>Usually within 24 hours</p>
-                    </div>
-                </div>
-
                 <!-- Social Links -->
                 <div class="social-grid">
+                    <a href="mailto:yashranka38@gmail.com" class="social-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>Email</div>
+                    </a>
+                    <a href="tel:+18573977460" class="social-item">
+                        <i class="fas fa-phone"></i>
+                        <div>Phone</div>
+                    </a>
                     <a href="https://www.linkedin.com/in/priyanshu-ranka/" class="social-item" target="_blank">
                         <i class="fab fa-linkedin"></i>
                         <div>LinkedIn</div>
@@ -92,14 +61,14 @@
                         <i class="fab fa-github"></i>
                         <div>GitHub</div>
                     </a>
-                    <a href="https://twitter.com/yourusername" class="social-item" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                        <div>Twitter</div>
-                    </a>
-                    <a href="mailto:yashranka38@gmail.com" class="social-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>Email</div>
-                    </a>
+                    <div class="social-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>Boston, MA</div>
+                    </div>
+                    <div class="social-item">
+                        <i class="fas fa-clock"></i>
+                        <div>24hrs Response</div>
+                    </div>
                 </div>
 
                 <!-- Availability Status -->
@@ -142,7 +111,8 @@
 
                     <div class="form-group">
                         <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" required placeholder="Brief subject of your message">
+                        <input type="text" id="subject" name="subject" required
+                            placeholder="Brief subject of your message">
                     </div>
 
                     <div class="form-group">
@@ -166,7 +136,7 @@
         // Mobile Navigation Toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
-        
+
         hamburger.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
@@ -181,7 +151,7 @@
 
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
+
             // Show loading state
             submitBtn.disabled = true;
             btnText.textContent = 'Sending...';
@@ -196,11 +166,11 @@
             try {
                 // Simulate API call (replace with actual email service)
                 await simulateEmailSend(data);
-                
+
                 // Show success message
                 showMessage('success', 'Message sent successfully! I\'ll get back to you within 24 hours.');
                 contactForm.reset();
-                
+
             } catch (error) {
                 // Show error message
                 showMessage('error', 'Failed to send message. Please try again or contact me directly via email.');
@@ -231,7 +201,7 @@
             formMessage.className = `form-message ${type}`;
             formMessage.textContent = message;
             formMessage.style.display = 'block';
-            
+
             // Auto-hide after 5 seconds
             setTimeout(() => {
                 formMessage.style.display = 'none';
@@ -240,7 +210,7 @@
 
         // Form validation
         const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
-        
+
         inputs.forEach(input => {
             input.addEventListener('blur', validateField);
             input.addEventListener('input', clearValidation);
@@ -249,12 +219,12 @@
         function validateField(e) {
             const field = e.target;
             const value = field.value.trim();
-            
+
             if (!value) {
                 field.style.borderColor = 'var(--error-color)';
                 return false;
             }
-            
+
             if (field.type === 'email') {
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                 if (!emailRegex.test(value)) {
@@ -262,7 +232,7 @@
                     return false;
                 }
             }
-            
+
             field.style.borderColor = 'var(--success-color)';
             return true;
         }
@@ -283,10 +253,11 @@
 
         // Auto-resize textarea
         const textarea = document.getElementById('message');
-        textarea.addEventListener('input', function() {
+        textarea.addEventListener('input', function () {
             this.style.height = 'auto';
             this.style.height = Math.min(this.scrollHeight, 300) + 'px';
         });
     </script>
 </body>
+
 </html>
