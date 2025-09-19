@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Priyanshu Ranka</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1 class="page-title">Resume</h1>
+        <div class="download-buttons">
+            <button onclick="downloadPDF()" class="btn btn-primary">
+                <i class="fas fa-download"></i>
+                Download PDF
+            </button>
+            <button onclick="window.print()" class="btn btn-secondary">
+                <i class="fas fa-print"></i>
+                Print Resume
+            </button>
+        </div>
+    </section>
+
+    <!-- Resume Content -->
+    <div class="resume-container">
+        <div class="resume-content">
+            <!-- Resume Header -->
+            <div class="resume-header">
+                <h1 class="resume-name">Priyanshu Ranka</h1>
+                <p class="resume-title">MS Robotics Student | Robotics Engineer</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:yashranka38@gmail.com">yashranka38@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+1 (857) 397-7460</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/priyanshu-ranka/"
+                            target="_blank">linkedin.com/in/priyanshu-ranka</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/AwesomeYash" target="_blank">github.com/AwesomeYash</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Boston, MA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Summary -->
+            <div class="resume-section">
+                <h2 class="section-title">
+                    <i class="fas fa-user"></i>
+                    Professional Summary
+                </h2>
+                <div class="section-content">
+                    <p>
+                        Passionate robotics engineering graduate student with experience in autonomous
+                        systems, computer vision, and machine learning. Proven track record of developing innovative
+                        robotic
+                        solutions for real-world applications. Seeking a full-time robotics engineer position to
+                        contribute
+                        to
+                        cutting-edge automation and AI-driven technologies.
+                        Robotics engineering graduate student with expertise in computer vision, machine learning, and
+                        autonomous systems. Demonstrated experience in developing AI-powered solutions including EV
+                        docking
+                        systems with 92%
+                        detection accuracy and real-time video processing applications. Proven ability to implement deep
+                        learning models,
+                        SLAM algorithms, and optimize performance for embedded systems. Seeking opportunities in
+                        robotics
+                        and AI
+                        development.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div class="resume-section">
+                <h2 class="section-title">
+                    <i class="fas fa-graduation-cap"></i>
+                    Education
+                </h2>
+                <div class="section-content">
+                    <div class="education-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title"> Master of Science in Robotics </div>
+                                <div class="item-company"> Northeastern University, Boston </div>
+                            </div>
+                            <div class="item-date"> Sept 2023 - May 2025 </div>
+                        </div>
+                        <div class="item-description">
+                            <p><strong>GPA:</strong> 3.4/4.0 <br><strong>Relevant Coursework:</strong> Robot Sensing &
+                                Navigation, Computer Vision, Machine Learning </p>
+                            <ul>
+                                <li> Focus on autonomous systems and computer vision applications </li>
+                                <li> Advanced coursework in deep learning and robotics algorithms </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title"> Bachelor of Engineering in Electronics & Communication </div>
+                                <div class="item-company"> SRM Institute of Sciecne and Technology, India
+                                </div>
+                            </div>
+                            <div class="item-date"> Sept 2020 - Jun 2024 </div>
+                        </div>
+                        <div class="item-description">
+                            <p><strong>GPA:</strong> 3.4/4.0 <br><strong>Relevant Coursework:</strong> Sensor and
+                                Actuator, Control Systems, Machining, Embedded Systems</p>
+                            <ul>
+                                <li> Completed senior design project on autonomous docking system </li>
+                                <li> Strong foundation in mechatronics and automation systems </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience -->
+            <div class="resume-section">
+                <h2 class="section-title">
+                    <i class="fas fa-briefcase"></i>
+                    Professional Experience
+                </h2>
+                <div class="section-content">
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">AI Intern</div>
+                                <div class="item-company">Outamation</div>
+                            </div>
+                            <div class="item-date">Jun 2025 - Aug 2025</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Researched and implemented AI-powered document text extraction solutions using
+                                    OpenCV and pytesseract</li>
+                                <li>Explored advanced platforms including Colpali and PaddleOCR for automated text
+                                    recognition applications</li>
+                                <li>Developed complete pipeline to extract text from documents and convert to markdown
+                                    format for AI training</li>
+                                <li>Evaluated multiple libraries and frameworks to identify optimal solutions for
+                                    different document types</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Research Assistant</div>
+                                <div class="item-company">Electrohub - Autonomous Docking System for Electric Vehicles,
+                                    Chennai, India</div>
+                            </div>
+                            <div class="item-date">Dec 2023 - May 2024</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Implemented machine learning algorithms achieving 92% precision in EV charging port
+                                    detection and localization</li>
+                                <li>Annotated over 1,000 images using LabelImg and trained SSD-MobileNet-V2 model for
+                                    object detection</li>
+                                <li>Developed supervised learning pipeline for instance and semantic segmentation of
+                                    charging port identification</li>
+                                <li>Enabled real-time classification system reducing human intervention and boosting
+                                    autonomous docking capability</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Software Assistant</div>
+                                <div class="item-company">Dimple Polyfilms, Ahmedabad, India</div>
+                            </div>
+                            <div class="item-date">Jun 2022 - Aug 2022</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Built and deployed comprehensive stock tracking solution reducing stock
+                                    discrepancies by 15%</li>
+                                <li>Performed validation and debugging for over 2,000 stock records spanning 8 diverse
+                                    product categories</li>
+                                <li>Ensured exceptional reliability and streamlined inventory management processes
+                                    through precise data entry</li>
+                                <li>Authored user guides and facilitated training for 6+ employees improving operational
+                                    efficiency</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skills -->
+                <div class="resume-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-cogs"></i>
+                        Technical Skills
+                    </h2>
+                    <div class="section-content">
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Programming Languages</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag"> Python </span>
+                                    <span class="skill-tag"> C++ </span>
+                                    <span class="skill-tag"> C </span>
+                                    <span class="skill-tag"> HTML </span>
+                                    <span class="skill-tag"> CSS </span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Robotics & AI</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">ROS/ROS2</span>
+                                    <span class="skill-tag">SLAM</span>
+                                    <span class="skill-tag">OpenCV</span>
+                                    <span class="skill-tag">TensorFlow</span>
+                                    <span class="skill-tag">PyTorch</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Tools & Platforms</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Linux</span>
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Gazebo</span>
+                                    <span class="skill-tag">Rviz</span>
+                                    <span class="skill-tag">Docker</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Hardware</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Arduino</span>
+                                    <span class="skill-tag">Raspberry Pi</span>
+                                    <span class="skill-tag">GPS</span>
+                                    <span class="skill-tag">LiDAR</span>
+                                    <span class="skill-tag">IMU</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4> Designing </h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Solidworks</span>
+                                    <span class="skill-tag">ANSYS</span>
+                                    <span class="skill-tag">AutoCAD</span>
+                                    <span class="skill-tag">MATLAB</span>
+                                    <span class="skill-tag">Simulink</span>
+                                </div>
+                            </div>
+                            <div class="skill-category">
+                                <h4> Machine Learning</h4>
+                                <div class="skill-list">
+                                    <span class="skill-tag">Word</span>
+                                    <span class="skill-tag">Excel</span>
+                                    <span class="skill-tag">Powerpoint</span>
+                                    <span class="skill-tag">Outlook</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Key Projects -->
+                <div class="resume-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-project-diagram"></i>
+                        Key Projects
+                    </h2>
+                    <div class="section-content">
+                        <div class="project-summary">
+                            <div class="project-item">
+                                <div class="project-name">Electrohub - Autonomous EV Docking System</div>
+                                <div class="project-tech">Python, TensorFlow, SSD-MobileNet-V2, LabelImg</div>
+                                <div class="project-desc">
+                                    Autonomous docking system achieving 92% precision in EV charging port detection
+                                    using advanced computer vision and 1,000+ annotated training images.
+                                </div>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-name">Neural Style Transfer - Implementation and Analysis</div>
+                                <div class="project-tech">PyTorch, VGG19, Deep Learning, L-BFGS</div>
+                                <div class="project-desc">
+                                    Comprehensive PyTorch-based artistic style transfer system with systematic
+                                    hyperparameter experimentation and automated parameter sweeps for optimal
+                                    stylization quality.
+                                </div>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-name">Real-Time Video Special Effects</div>
+                                <div class="project-tech">C++, ONNX Runtime, Computer Vision</div>
+                                <div class="project-desc">
+                                    Implemented 15+ real-time visual effects with optimized blur algorithms, face
+                                    detection, and depth-based background manipulation achieving performance
+                                    improvements.
+                                </div>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-name">Recognition using Deep Networks</div>
+                                <div class="project-tech">PyTorch, CNN, Transfer Learning, Data Analysis</div>
+                                <div class="project-desc">
+                                    End-to-end deep learning workflow for MNIST digit recognition and Greek character
+                                    classification with filter visualization and automated hyperparameter optimization.
+                                </div>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-name">Calibration and Augmented Reality</div>
+                                <div class="project-tech">C++, OpenCV, SIFT/ORB/SURF, 3D Graphics</div>
+                                <div class="project-desc">
+                                    Comprehensive camera calibration and AR system with intrinsic/extrinsic parameter
+                                    estimation for accurate 3D-to-2D projection and feature detection algorithms.
+                                </div>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-name">Content-Based Image Retrieval System</div>
+                                <div class="project-tech">C++, OpenCV, ResNet18, Feature Engineering</div>
+                                <div class="project-desc">
+                                    Advanced CBIR system combining classical feature extraction with deep learning
+                                    embeddings using multi-modal approaches and comparative performance analysis.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
