@@ -226,6 +226,68 @@
                     </div>
                 </div>
 
+                <!-- Addtional Data -->
+                <!-- Internships 
+                <div class="section-content">
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Robotics Engineering Co-op</div>
+                                <div class="item-company">Boston Dynamics, Waltham, MA</div>
+                            </div>
+                            <div class="item-date">Jan 2024 - Aug 2024</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Developed perception algorithms for Spot robot using ROS2 and Python</li>
+                                <li>Implemented computer vision pipeline reducing object detection latency by 40%</li>
+                                <li>Collaborated with cross-functional teams on autonomous inspection applications</li>
+                                <li>Created comprehensive test suites and documentation for robotic systems</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Software Engineering Intern</div>
+                                <div class="item-company">iRobot Corporation, Bedford, MA</div>
+                            </div>
+                            <div class="item-date">May 2023 - Dec 2023</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Contributed to Roomba navigation stack using SLAM and path planning algorithms</li>
+                                <li>Optimized mapping algorithms resulting in 25% improvement in cleaning efficiency
+                                </li>
+                                <li>Developed Python tools for sensor data analysis and visualization</li>
+                                <li>Participated in agile development process and code reviews</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="item-header">
+                            <div>
+                                <div class="item-title">Research Assistant</div>
+                                <div class="item-company">University Robotics Lab</div>
+                            </div>
+                            <div class="item-date">Sep 2022 - May 2023</div>
+                        </div>
+                        <div class="item-description">
+                            <ul>
+                                <li>Researched autonomous navigation for mobile robots in dynamic environments</li>
+                                <li>Implemented and tested various SLAM algorithms in simulation and hardware</li>
+                                <li>Co-authored research paper published in IEEE Robotics Conference</li>
+                                <li>Mentored undergraduate students on robotics projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            -->
+
                 <!-- Skills -->
                 <div class="resume-section">
                     <h2 class="section-title">
@@ -299,6 +361,7 @@
                 </div>
 
                 <!-- Key Projects -->
+
                 <div class="resume-section">
                     <h2 class="section-title">
                         <i class="fas fa-project-diagram"></i>
@@ -360,11 +423,124 @@
                     </div>
                 </div>
 
+                <!-- Additional Sections for projects
+                <div class="resume-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-project-diagram"></i>
+                        Key Projects
+                    </h2>
+                    <div class="section-content">
+                        <div class="project-summary">
+                            <div class="project-item">
+                                <div class="project-name">Autonomous Navigation Robot</div>
+                                <div class="project-tech">ROS2, Python, SLAM, OpenCV</div>
+                                <div class="project-desc">
+                                    Developed complete autonomous navigation system with real-time SLAM and dynamic
+                                    obstacle
+                                    avoidance.
+                                </div>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-name">Real-time Object Detection</div>
+                                <div class="project-tech">PyTorch, YOLO, TensorRT, OpenCV</div>
+                                <div class="project-desc">
+                                    Built high-performance object detection pipeline optimized for edge deployment in
+                                    industrial applications.
+                                </div>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-name">6-DOF Robotic Arm Controller</div>
+                                <div class="project-tech">C++, ROS, MoveIt, Gazebo</div>
+                                <div class="project-desc">
+                                    Implemented inverse kinematics and trajectory planning for precision manipulation
+                                    tasks.
+                                </div>
+                            </div>
+                            <div class="project-item">
+                                <div class="project-name">Predictive Maintenance AI</div>
+                                <div class="project-tech">Python, TensorFlow, Scikit-learn</div>
+                                <div class="project-desc">
+                                    Developed ML models for predictive maintenance in industrial robotics using sensor
+                                    data
+                                    analysis.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                -->
+
+                <!-- Certifications & Awards 
+                <div class="resume-section">
+                    <h2 class="section-title">
+                        <i class="fas fa-award"></i>
+                        Certifications & Awards
+                    </h2>
+                    <div class="section-content">
+                        <ul>
+                            <li><strong>AWS Certified Cloud Practitioner</strong> - Amazon Web Services (2024)</li>
+                            <li><strong>Best Paper Award</strong> - IEEE International Conference on Robotics (2024)
+                            </li>
+                            <li><strong>Graduate Fellowship</strong> - Northeastern University (2023-2025)</li>
+                            <li><strong>First Place</strong> - University Robotics Competition (2023)</li>
+                        </ul>
+                    </div>
+                </div>
+            -->
+
             </div>
         </div>
-    </div>
 
-    <script src="scripts.js"></script>
+        <script>
+            // Mobile Navigation Toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // PDF Download Functionality
+            function downloadPDF() {
+                fetch("https://github.com/AwesomeYash/Portfolio-Site/blob/main/Assests/Priyanshu_Ranka_Resume.pdf")
+                    .then(response => response.blob())
+                    .then(blob => {
+                        const url = window.URL.createObjectURL(blob);
+                        const link = document.createElement('a');
+                        link.href = url;
+                        link.download = "https://github.com/AwesomeYash/Portfolio-Site/blob/main/Assests/Priyanshu_Ranka_Resume.pdf";
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        window.URL.revokeObjectURL(url);
+                    })
+                    .catch(error => {
+                        console.error('Download failed:', error);
+                        // Fallback: open in new tab
+                        window.open("https://github.com/AwesomeYash/Portfolio-Site/blob/main/Assests/Priyanshu_Ranka_Resume.pdf", '_blank');
+                    });
+            }
+
+            // Header background on scroll
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('.header');
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(10, 10, 10, 0.98)';
+                } else {
+                    header.style.background = 'rgba(10, 10, 10, 0.95)';
+                }
+            });
+
+            // Print optimization
+            window.addEventListener('beforeprint', () => {
+                document.body.classList.add('printing');
+            });
+
+            window.addEventListener('afterprint', () => {
+                document.body.classList.remove('printing');
+            });
+        </script>
 </body>
 
 </html>
