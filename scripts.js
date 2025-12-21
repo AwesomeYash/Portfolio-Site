@@ -405,6 +405,25 @@ function initProjectsPage() {
             ]
         },
 
+        'rtk-gps-kinematics': {
+            title: 'RTK-GPS Kinematics and Precision Analysis',
+            subtitle: 'GNSS • Localization • Autonomous Navigation',
+            description: 'This Real-Time Kinematic GPS analysis system implements differential GNSS positioning techniques achieving centimeter-level localization accuracy through carrier-phase measurements and base station corrections. The system performs comprehensive coordinate transformations between geodetic latitude-longitude-altitude and local East-North-Up reference frames enabling trajectory analysis in intuitive Cartesian coordinates. Velocity estimation derives vehicle kinematics through numerical differentiation of position measurements with configurable filtering for noise reduction. Statistical error characterization quantifies positioning accuracy through standard deviation analysis and comparison against ground truth trajectories validating RTK performance for autonomous vehicle navigation.',
+            tech: ['RTK-GPS', 'GNSS', 'Python', 'ROS2', 'Coordinate Transforms', 'Differential Positioning', 'Velocity Estimation', 'Error Analysis'],
+            features: [
+                'Real-Time Kinematic Positioning implementing carrier-phase differential corrections from base station achieving centimeter-level accuracy through ambiguity resolution',
+                'Coordinate Transformation Pipeline converting geodetic WGS84 coordinates to local East-North-Up frames using reference point transformations for trajectory visualization',
+                'Velocity Computation from Position deriving vehicle kinematics through numerical differentiation with configurable time windows and filtering strategies',
+                'Statistical Error Characterization quantifying positioning precision through standard deviation analysis, error distributions, and accuracy metrics validation',
+                'ROS2 Driver Integration publishing RTK-GPS measurements with standard sensor_msgs/NavSatFix messages enabling integration with autonomous navigation stacks',
+                'Trajectory Visualization generating position plots, velocity profiles, and error analysis graphs for RTK performance evaluation and validation'
+            ],
+            challenges: 'Primary challenges included handling RTK fix loss during satellite occlusions, managing coordinate transformation singularities near poles, and filtering velocity noise from numerical differentiation. Solutions employed fix quality monitoring with fallback modes, singularity-free transformation implementations, and Savitzky-Golay filtering for smooth velocity estimates while preserving kinematic features.',
+            links: [
+                { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/Kinematics-of-RTK-GPS', icon: 'fab fa-github', primary: true },
+                { text: 'Python Source', url: 'https://github.com/AwesomeYash/Kinematics-of-RTK-GPS/tree/main/src', icon: 'fab fa-python', primary: false }
+            ]
+        }
 
 
     };
