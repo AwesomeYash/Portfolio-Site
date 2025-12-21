@@ -63,7 +63,7 @@ function initHomePage() {
     // Scroll indicator click
     const scrollIndicator = document.querySelector('.scroll-indicator');
     const quickStats = document.querySelector('.quick-stats');
-    
+
     if (scrollIndicator && quickStats) {
         scrollIndicator.addEventListener('click', () => {
             quickStats.scrollIntoView({
@@ -81,7 +81,7 @@ function initAboutPage() {
     // Smooth scrolling for scroll indicator
     const scrollIndicator = document.querySelector('.scroll-indicator');
     const mainContent = document.querySelector('.main-content');
-    
+
     if (scrollIndicator && mainContent) {
         scrollIndicator.addEventListener('click', () => {
             mainContent.scrollIntoView({
@@ -272,7 +272,141 @@ function initProjectsPage() {
                 { text: 'Research Documentation', url: 'https://github.com/AwesomeYash/Electrohub-Docking-System-for-EVs/tree/main/Reference%20Research%20papers', icon: 'fas fa-file-alt', primary: false },
                 { text: 'Report', url: 'https://github.com/AwesomeYash/Electrohub-Docking-System-for-EVs/blob/main/Report/Final%20Report.pdf', icon: 'fas fa-university', primary: false }
             ]
-        }
+        },
+
+        'imu-allan-variance': {
+            title: 'IMU Noise Characterization with Allan Variance',
+            subtitle: 'Sensor Analysis • Signal Processing • ROS',
+            description: 'This comprehensive sensor characterization project implements Allan Variance analysis to identify and quantify noise sources in Inertial Measurement Units (IMUs), specifically the VectorNav VN-100. The system develops a complete device driver for IMU data acquisition and performs extensive stationary noise analysis over extended periods (5+ hours) to characterize stochastic error sources. Allan Variance methodology enables precise identification of key noise parameters including Angle Random Walk (ARW), Bias Instability, and Rate Random Walk through log-log plot analysis with characteristic slope identification. The project establishes mathematical relationships between physical noise characteristics and sensor specifications, providing crucial parameters for Kalman filter tuning and navigation system optimization.',
+            tech: ['Python', 'ROS', 'Allan Variance', 'Signal Processing', 'NumPy', 'Matplotlib', 'VectorNav VN-100', 'Statistical Analysis'],
+            features: [
+                'Comprehensive Device Driver Development implementing complete ROS-compatible driver for VectorNav VN-100 with optimized USB latency (1ms) and udev rules',
+                'Extended Stationary Data Collection performing rigorous 5+ hour data capture under controlled conditions for reliable variance estimation',
+                'Multi-Parameter Noise Identification extracting Angle Random Walk, Bias Instability, and Rate Random Walk from characteristic slope analysis',
+                'Automated Analysis Pipeline with Python framework implementing Allan Variance algorithms with clustering and confidence bounds',
+                'Visual Noise Characterization generating log-log Allan Deviation plots with annotated parameters and datasheet validation',
+                'Kalman Filter Integration providing extracted noise parameters directly applicable to process noise covariance matrix configuration'
+            ],
+            challenges: 'Primary challenges included ensuring sufficient data duration for accurate variance estimation at large τ values and minimizing USB latency for high-rate sensor capture. Solutions involved implementing custom udev rules reducing latency from 16ms to 1ms and collecting 5+ hours of stationary data. Computational efficiency was addressed through optimized cluster formation algorithms.',
+            links: [
+                { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/IMU-Noise-Characterization-with-Allan-Variance-', icon: 'fab fa-github', primary: true },
+                { text: 'Analysis Code', url: 'https://github.com/AwesomeYash/IMU-Noise-Characterization-with-Allan-Variance-/tree/main/analysis', icon: 'fas fa-code', primary: false },
+                { text: 'Source Files', url: 'https://github.com/AwesomeYash/IMU-Noise-Characterization-with-Allan-Variance-/tree/main/src', icon: 'fas fa-folder', primary: false }
+            ]
+        },
+
+        'panorama-stitching': {
+            title: 'Panoramic Image Stitching with Harris Corner Detection',
+            subtitle: 'Computer Vision • Feature Matching • Image Processing',
+            description: 'This comprehensive computer vision project implements an iterative panoramic image stitching pipeline combining Harris Corner Detection with SIFT descriptors for robust feature-based image alignment. The system progresses through six development iterations, systematically refining corner detection parameters, feature matching strategies, and homography estimation techniques to achieve seamless panorama generation. The implementation employs Harris Corner Detector for identifying stable interest points characterized by significant intensity gradients in multiple directions, paired with SIFT descriptors for rotation and scale-invariant feature representation. RANSAC algorithm robustly estimates homography transformation matrices enabling accurate geometric alignment of overlapping image regions.',
+            tech: ['Python', 'OpenCV', 'Harris Corner Detection', 'SIFT', 'RANSAC', 'NumPy', 'Jupyter Notebook', 'Homography Estimation'],
+            features: [
+                'Iterative Harris Corner Detection Implementation with systematic parameter optimization (sigma=2, threshold=0.05, radius=2) using eigenvalue analysis for robust corner identification',
+                'Multi-Scale SIFT Descriptor Integration implementing 128-dimensional feature vectors with configurable neighborhood parameters ensuring rotation and scale invariance',
+                'Robust Feature Matching Pipeline employing Euclidean distance comparison with Lowe\'s ratio test (0.8 threshold) for filtering unreliable correspondences',
+                'RANSAC-Based Homography Estimation with 5000 iterations processing 200 matches to fit transformation matrices while rejecting geometric outliers',
+                'Comprehensive Iterative Development across six documented stages validating detection algorithms and refining stitching quality with visual feedback',
+                'Canvas-Based Panorama Composition generating seamless wide-field outputs using perspective warping and blending for professional-quality results'
+            ],
+            challenges: 'Primary challenges included distinguishing reliable corner features in regions with repetitive patterns and achieving accurate homography with limited overlapping regions. Solutions involved implementing Lowe\'s ratio test for filtering ambiguous matches, systematic parameter optimization across six iterations, and RANSAC\'s robust outlier rejection. Multi-scale SIFT descriptors provided scale invariance improving matching reliability.',
+            links: [
+                { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/Panorama', icon: 'fab fa-github', primary: true },
+                { text: 'Project Report', url: 'https://github.com/AwesomeYash/Panorama/blob/main/main.pdf', icon: 'fas fa-file-pdf', primary: false },
+                { text: 'Jupyter Notebooks', url: 'https://github.com/AwesomeYash/Panorama/blob/main/main.ipynb', icon: 'fas fa-code', primary: false },
+                { text: 'Harris Implementation', url: 'https://github.com/AwesomeYash/Panorama/blob/main/harris.py', icon: 'fab fa-python', primary: false }
+            ]
+        },
+
+        'robot-motion-planning': {
+            title: 'Autonomous Manipulation: Motion Planning and Obstacle Avoidance',
+            subtitle: 'Robotics • Motion Planning • Computer Vision',
+            description: 'This comprehensive robotic manipulation project implements autonomous motion planning and collision-free trajectory generation for the PincherX100 robotic arm using vision-based localization and advanced path optimization algorithms. The system integrates overhead camera-based AprilTag detection for real-time object pose estimation in workspace coordinates, enabling precise pick-and-place operations with payload handling. Cubic spline interpolation generates smooth, collision-free trajectories between waypoints while maintaining movement threshold constraints and enforcing joint limits for safe autonomous operation. Advanced collision detection algorithms dynamically modify planned paths around obstacles.',
+            tech: ['MATLAB', 'Motion Planning', 'AprilTag Detection', 'Trajectory Optimization', 'Collision Avoidance', 'Inverse Kinematics', 'Dynamixel Servos', 'Computer Vision'],
+            features: [
+                'Vision-Based Object Localization with overhead AprilTag detection for 6-DOF pose estimation transforming detections to robot workspace coordinates',
+                'Smooth Trajectory Generation using cubic spline interpolation with C² continuity and 0.1m movement constraints for jerk-minimized motion',
+                'Dynamic Collision Avoidance integrating real-time obstacle detection with path modification algorithms maintaining minimum clearance distances',
+                'Multi-Mode Manipulation Tasks including pick-and-place, precision writing, and adaptive gripper control for varying payload geometries',
+                'Hardware Safety Framework enforcing joint limits, z-threshold validation (0.02m minimum), and real-time error handling',
+                'Real-Time Execution Pipeline from perception through actuation with closed-loop monitoring for robust autonomous manipulation'
+            ],
+            challenges: 'Primary challenges included ensuring smooth trajectory transitions during gripper operations and reliable collision avoidance with complex geometries. Solutions employed cubic spline interpolation for C² continuity, conservative virtual obstacle representations with safety margins, and efficient AprilTag detection with optimized trajectory computation for real-time performance.',
+            links: [
+                { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/Robot-Motion-Planning-and-Obstacle-Avoidance', icon: 'fab fa-github', primary: true },
+                { text: 'Technical Report', url: 'https://github.com/AwesomeYash/Robot-Motion-Planning-and-Obstacle-Avoidance/blob/main/Report.pdf', icon: 'fas fa-file-pdf', primary: false },
+                { text: 'Pick-Place Demo', url: 'https://github.com/AwesomeYash/Robot-Motion-Planning-and-Obstacle-Avoidance/blob/main/Pick_place.mp4', icon: 'fas fa-video', primary: false },
+                { text: 'Obstacle Demo', url: 'https://github.com/AwesomeYash/Robot-Motion-Planning-and-Obstacle-Avoidance/blob/main/Obstacle%20Avoidance.mp4', icon: 'fas fa-video', primary: false }
+            ]
+        },
+
+        'gnss-imu-fusion': {
+            title: 'Multi-Sensor Fusion: GNSS and IMU Dead Reckoning',
+            subtitle: 'Sensor Fusion • Autonomous Navigation • Localization',
+            description: 'This advanced sensor fusion project implements robust dead reckoning algorithms for autonomous vehicle localization by integrating GNSS measurements with VectorNav VN-100 IMU data through complementary filtering and error compensation techniques. The system addresses fundamental challenges in autonomous navigation including GNSS signal degradation in GPS-denied environments and IMU drift accumulation through multi-sensor integration. Implementation includes magnetometer calibration, accelerometer bias compensation, and gyroscope-magnetometer fusion using complementary filters for reliable heading computation. The dead reckoning pipeline processes high-frequency IMU measurements with lower-frequency GNSS updates through synchronized ROS2 drivers.',
+            tech: ['Sensor Fusion', 'VN-100 IMU', 'GNSS', 'Dead Reckoning', 'ROS2', 'Python', 'Complementary Filter', 'Allan Variance'],
+            features: [
+                'Magnetometer Calibration Pipeline implementing hard and soft iron distortion correction through ellipsoid fitting for accurate heading computation',
+                'IMU Noise Characterization performing Allan Variance analysis identifying angle random walk, bias instability, and rate random walk parameters',
+                'Accelerometer Bias Compensation developing forward velocity estimation through integration with systematic offset error removal',
+                'Complementary Filter Fusion integrating gyroscope angular rate with magnetometer absolute heading for drift-free estimation',
+                'Multi-Rate Sensor Synchronization creating unified ROS2 messages combining 40Hz IMU with 1Hz GNSS using timestamp alignment',
+                'Dead Reckoning Implementation synthesizing calibrated measurements into navigation solution with periodic GNSS drift correction'
+            ],
+            challenges: 'Primary challenges included managing different sensor update rates (40Hz IMU vs 1Hz GNSS), compensating magnetometer distortions from vehicle ferromagnetic materials, and preventing IMU drift accumulation. Solutions employed timestamp-synchronized ROS2 drivers, ellipsoid-fitting calibration, and complementary filtering. Allan Variance characterized noise parameters for optimal filter design.',
+            links: [
+                { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/GNSS-and-VN100-Sensor-Fusion-for-Dead-Reckoning', icon: 'fab fa-github', primary: true },
+                { text: 'Technical Report', url: 'https://github.com/AwesomeYash/GNSS-and-VN100-Sensor-Fusion-for-Dead-Reckoning/blob/main/Lab4-Report.pdf', icon: 'fas fa-file-pdf', primary: false },
+                { text: 'Python Code', url: 'https://github.com/AwesomeYash/GNSS-and-VN100-Sensor-Fusion-for-Dead-Reckoning/tree/main/Code%20Files', icon: 'fab fa-python', primary: false },
+                { text: 'Results', url: 'https://github.com/AwesomeYash/GNSS-and-VN100-Sensor-Fusion-for-Dead-Reckoning/tree/main/Results', icon: 'fas fa-chart-line', primary: false }
+            ]
+        },
+
+        'ddqn-race-car': {
+            title: 'Deep Reinforcement Learning for Autonomous Racing',
+            subtitle: 'Reinforcement Learning • Deep Q-Network • Autonomous Control',
+            description: 'This advanced reinforcement learning project implements Double Deep Q-Network (DDQN) architecture for training autonomous racing agents to navigate complex track environments through trial-and-error learning. The system develops optimal control policies for steering and throttle commands by maximizing cumulative reward signals incorporating track progress, velocity maintenance, and collision avoidance. Neural network agents learn racing strategies through experience replay buffers storing state-action-reward transitions, while epsilon-greedy exploration balances exploitation of learned behaviors with discovery of novel trajectories. Custom racing environments feature multiple track geometries including square circuits and curved racing tracks with configurable obstacle layouts and goal positions.',
+            tech: ['Deep Reinforcement Learning', 'DDQN', 'PyTorch', 'Neural Networks', 'Experience Replay', 'Python', 'Autonomous Control', 'Policy Learning'],
+            features: [
+                'Double Deep Q-Network Architecture implementing separate target and policy networks reducing overestimation bias in Q-value approximation for stable learning convergence',
+                'Custom Racing Environment Design featuring configurable track geometries, collision detection, goal checkpoints, and observation spaces providing vehicle state and sensor readings',
+                'Experience Replay Buffer implementing prioritized sampling of state transitions enabling efficient training through decorrelated sample batches and improved data efficiency',
+                'Reward Shaping Strategy incorporating multi-objective reward signals balancing track progress, velocity optimization, collision penalties, and goal achievement for learned racing behaviors',
+                'Epsilon-Greedy Exploration Policy managing exploration-exploitation tradeoff through decaying randomness schedule enabling initial discovery followed by exploitation refinement',
+                'Multi-Track Training Pipeline training agents on diverse track geometries including square circuits and curved racing tracks demonstrating policy generalization capabilities'
+            ],
+            challenges: 'Primary challenges included designing effective reward functions balancing multiple racing objectives, preventing neural network divergence during training, and achieving policy generalization across track geometries. Solutions employed reward shaping with weighted multi-objective signals, target network stabilization with periodic updates, and experience replay with prioritized sampling for stable convergence.',
+            links: [
+                { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/DDQN-for-Race-Car', icon: 'fab fa-github', primary: true },
+                { text: 'Technical Report', url: 'https://github.com/AwesomeYash/DDQN-for-Race-Car/blob/main/Report%20-%20DDQN%20for%20Car%20Racing.pdf', icon: 'fas fa-file-pdf', primary: false },
+                { text: 'Trained Models', url: 'https://github.com/AwesomeYash/DDQN-for-Race-Car/tree/main/Trained%20Models', icon: 'fas fa-brain', primary: false },
+                { text: 'Video Results', url: 'https://github.com/AwesomeYash/DDQN-for-Race-Car/tree/main/Video%20Results', icon: 'fas fa-video', primary: false }
+            ]
+        },
+
+        'realtime-object-recognition': {
+            title: 'Real-Time 2D Object Recognition System',
+            subtitle: 'Computer Vision • Object Recognition • Machine Learning',
+            description: 'This real-time computer vision system implements classical object recognition pipeline for live video stream classification using moment-based feature extraction and K-nearest neighbor classification. The system performs real-time segmentation separating foreground objects from background through thresholding and morphological operations, extracting discriminative geometric features including Hu moments, oriented bounding boxes, and axis ratios. K-NN classifier with Euclidean distance metric enables multi-class object recognition trained on labeled feature database. Implementation includes confusion matrix evaluation quantifying classification accuracy across object categories and demonstrating robustness to rotation, scale, and translation variations.',
+            tech: ['C++', 'OpenCV', 'Object Recognition', 'Feature Extraction', 'K-NN Classification', 'Image Segmentation', 'Moment Analysis', 'Real-Time Processing'],
+            features: [
+                'Real-Time Segmentation Pipeline implementing adaptive thresholding and morphological operations for foreground-background separation with connected component analysis',
+                'Moment-Based Feature Extraction computing Hu moment invariants, central moments, and geometric descriptors providing rotation, scale, and translation invariant representations',
+                'K-Nearest Neighbor Classification implementing distance-based voting with Euclidean metric for multi-class object recognition from labeled training database',
+                'Oriented Bounding Box Computation calculating minimum area rectangles and principal axis orientations for object pose estimation and geometric feature derivation',
+                'Confusion Matrix Evaluation quantifying classification performance across object categories with precision, recall, and accuracy metrics for model validation',
+                'Interactive Training Mode enabling live capture and labeling of object instances for dynamic database expansion and classifier adaptation to novel categories'
+            ],
+            challenges: 'Primary challenges included achieving real-time performance during feature computation, handling lighting variations affecting segmentation quality, and preventing misclassification of similar object shapes. Solutions employed optimized moment calculation algorithms, adaptive thresholding with local processing, and multi-scale feature extraction combining geometric and moment-based descriptors for improved discrimination.',
+            links: [
+                { text: 'GitHub Repository', url: 'https://github.com/AwesomeYash/Project-3-Real-time-2-D-Object-Recognition', icon: 'fab fa-github', primary: true },
+                { text: 'Technical Report', url: 'https://github.com/AwesomeYash/Project-3-Real-time-2-D-Object-Recognition/blob/main/PRCV_Project_3_Report.pdf', icon: 'fas fa-file-pdf', primary: false },
+                { text: 'Demo Videos', url: 'https://github.com/AwesomeYash/Project-3-Real-time-2-D-Object-Recognition/tree/main/Working%20Videos', icon: 'fas fa-video', primary: false },
+                { text: 'Results', url: 'https://github.com/AwesomeYash/Project-3-Real-time-2-D-Object-Recognition/tree/main/Result_Images', icon: 'fas fa-images', primary: false }
+            ]
+        },
+
+
+
     };
 
     // Modal functionality
@@ -353,7 +487,7 @@ function initContactPage() {
     // Contact Form Handler
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
-    
+
     if (contactForm && formMessage) {
         const submitBtn = contactForm.querySelector('.submit-btn');
         const btnText = submitBtn.querySelector('.btn-text');
@@ -472,7 +606,7 @@ function initContactPage() {
 
 function initResumePage() {
     // PDF Download Functionality
-    window.downloadPDF = function() {
+    window.downloadPDF = function () {
         fetch("https://github.com/AwesomeYash/Portfolio-Site/blob/main/Assests/Priyanshu_Ranka_Resume.pdf")
             .then(response => response.blob())
             .then(blob => {
@@ -515,8 +649,8 @@ function initializePage() {
 
     // Page-specific functionality
     const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
-    
-    switch(currentPage) {
+
+    switch (currentPage) {
         case 'index':
         case '':
             initHomePage();
