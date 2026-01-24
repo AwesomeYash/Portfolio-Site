@@ -2,57 +2,122 @@
 // Author: Priyanshu Ranka
 
 // ==============================================
-// COMMON FUNCTIONALITY (All Pages)
+// CONTACT PAGE SPECIFIC
 // ==============================================
 
-// Mobile Navigation Toggle
-function initMobileNavigation() {
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+function initContactPage() {
+    const contactForm = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
 
-    if (hamburger && navLinks) {
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
+    if (contactForm && formMessage) {
+        const submitBtn = contactForm.querySelector('.submit-btn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnIcon = submitBtn.querySelector('.btn-icon');
+        const spinner = submitBtn.querySelector('.loading-spinner');
+
+        // Check for success parameter in URL (after redirect from Web3Forms)
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === 'true') {
+            showMessage('success', 'Message sent successfully! I\'ll get back to you within 24 hours.');
+            // Clear URL parameter for clean URL
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Show loading state
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending...';
+            btnIcon.style.display = 'none';
+            spinner.style.display = 'block';
+            formMessage.style.display = 'none';
+
+            try {
+                const formData = new FormData(contactForm);
+
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    showMessage('success', 'Message sent successfully! I\'ll get back to you within 24 hours.');
+                    contactForm.reset();
+                } else {
+                    throw new Error(data.message || 'Submission failed');
+                }
+
+            } catch (error) {
+                console.error('Form submission error:', error);
+                showMessage('error', 'Failed to send message. Please try again or email me directly at yashranka38@gmail.com');
+            } finally {
+                // Reset button state
+                submitBtn.disabled = false;
+                btnText.textContent = 'Send Message';
+                btnIcon.style.display = 'block';
+                spinner.style.display = 'none';
+            }
         });
-    }
-}
 
-// Header Background Change on Scroll
-function initHeaderScrollEffect() {
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('.header');
-        if (header) {
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(10, 10, 10, 0.98)';
-                header.style.borderBottomColor = 'rgba(0, 212, 255, 0.3)';
-            } else {
-                header.style.background = 'rgba(10, 10, 10, 0.95)';
-                header.style.borderBottomColor = 'rgba(0, 212, 255, 0.1)';
+        // Form validation
+        const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
+        inputs.forEach(input => {
+            input.addEventListener('blur', validateField);
+            input.addEventListener('input', clearValidation);
+        });
+
+        // Auto-resize textarea
+        const textarea = document.getElementById('message');
+        if (textarea) {
+            textarea.addEventListener('input', function () {
+                this.style.height = 'auto';
+                this.style.height = Math.min(this.scrollHeight, 300) + 'px';
+            });
+        }
+    }
+
+    // Helper functions
+    function showMessage(type, message) {
+        const formMessage = document.getElementById('formMessage');
+        if (formMessage) {
+            formMessage.className = `form-message ${type}`;
+            formMessage.textContent = message;
+            formMessage.style.display = 'block';
+
+            // Auto-hide after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        }
+    }
+
+    function validateField(e) {
+        const field = e.target;
+        const value = field.value.trim();
+
+        if (!value) {
+            field.style.borderColor = 'var(--error-color)';
+            return false;
+        }
+
+        if (field.type === 'email') {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(value)) {
+                field.style.borderColor = 'var(--error-color)';
+                return false;
             }
         }
-    });
-}
 
-// Smooth Scrolling for Navigation Links
-function initSmoothScrolling() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-            // Close mobile menu if open
-            const navLinks = document.querySelector('.nav-links');
-            if (navLinks) {
-                navLinks.classList.remove('active');
-            }
-        });
-    });
+        field.style.borderColor = 'var(--success-color)';
+        return true;
+    }
+
+    function clearValidation(e) {
+        e.target.style.borderColor = 'transparent';
+    }
 }
 
 // ==============================================
