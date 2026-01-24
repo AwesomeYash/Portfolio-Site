@@ -79,15 +79,25 @@
             <!-- Contact Form -->
             <div class="contact-form">
                 <h3>Send Message</h3>
-                <form id="contactForm">
+                <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+
+                    <!-- Replace with your actual access key from web3forms.com -->
+                    <input type="hidden" name="access_key" value="ac5b9bc4-8a30-4c2b-b43f-7b4893b282c4">
+
+                    <!-- Optional: Redirect after successful submission -->
+                    <input type="hidden" name="redirect" value="https://yourwebsite.com/contact.html?success=true">
+
+                    <!-- Optional: Custom subject line for email -->
+                    <input type="hidden" name="from_name" value="Portfolio Contact Form">
+
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" required placeholder="Your first name">
+                            <input type="text" id="firstName" name="first_name" required placeholder="Your first name">
                         </div>
                         <div class="form-group">
                             <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" name="lastName" required placeholder="Your last name">
+                            <input type="text" id="lastName" name="last_name" required placeholder="Your last name">
                         </div>
                     </div>
 
@@ -111,6 +121,9 @@
                         <label for="message">Message *</label>
                         <textarea id="message" name="message" required placeholder="Your message..."></textarea>
                     </div>
+
+                    <!-- Honeypot spam protection (hidden from users) -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                     <button type="submit" class="submit-btn">
                         <span class="btn-text">Send Message</span>
